@@ -4,10 +4,9 @@ Welcome to this school project ! We worked on a Cocktail picker by ingredients !
 Feel free to try it !
 
 - Main : 
-        - Pick your ingredients
-        - Find your evening's cocktail
+        - Pick your ingredients and find your perfect cocktail
 
 - Features :
         - Search bar
         - A compléter
-        
+
