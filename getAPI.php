@@ -1,15 +1,23 @@
 <?php
-
+    include 'form_handler.php';
     // Define ingredient and use vodka as default 
-
     $ingredient = empty($_GET['ingredient']) ? 'Vodka' : $_GET['ingredient'];
 
     // Create API url
 
+    //ingredient
     $url = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?";
     $url .= http_build_query([
         'i' => $ingredient
     ]);
+
+
+    //type 
+    $url_type = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?";
+    $url_type .= http_build_query([
+        'a' => $types
+    ]);
+    
 
     // Create cache info
     $cacheKey = md5($url);
@@ -43,5 +51,7 @@
 
     // Decode JSON
     return $result = json_decode($result);
+
+    
 
 ?>
