@@ -16,11 +16,11 @@ include 'getAPI.php';
     <form action="#" method="get">
         <input type="text" name="ingredient" placeholder="Ingredient" value="<?= $ingredient ?>">
         <input type="submit">
-    </form>
 
     <!-- Results -->
     <?php foreach($result->drinks as $_drink ): ?>
         <div><?= $_drink->strDrink ?></div>
+        <img src="<?= $_drink->strDrinkThumb ?>" alt="">
     <?php endforeach; ?>
 </body>
 </html>
