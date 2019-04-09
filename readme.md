@@ -1,6 +1,6 @@
 # CocktailAPI
 
-Welcome to this school project ! We worked on a Cocktail picker by ingredients ! Feel free to try it !
+Welcome to this school project ! We worked on a Cocktail picker by ingredients, feel free to try it !
 
 
 ## Functions :
@@ -21,7 +21,7 @@ You will find cocktails to create with your ingredients, no need to buy a lot, j
 
 ## Authors :
 
-:fire: Equipe 12 de la H2 P2022 d'HETIC ! :fire:
+:fire: Team 12 of H2P2022 :fire:
 
 ## Database :
 
