@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+h4 {
+    color: #FC466B;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #0C1A6A;
+    font-weight: bold;
+    font-size: 3.5em;
+    padding: 15px 0;
+}
+
+/*
+
+        HEADER
+
+*/
+
+header {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 14px -4px rgba(145, 145, 145, 0.75);
+}
+
+header h2{
+    padding-left: 5%;
+}
+
+#navigation li {
+    display: inline;
+    margin: 10px 20px;
+    color: #0C1A6A;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+#navigation li a {
+    text-decoration: none;
+}
+
+/* 
+                INTRO
+*/
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    padding: 0 50px;
+}
+
+.introtext {
+    width: 30%;
+    margin: 0 5%;
+}
+
+.introtext p {
+    width: 70%;
+    line-height: 1.5em;
+}
+
+.introsvg {
+    width: 60%;
+}
+
+.button1 {
+    display: block;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 500;
+    width: 150px;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    margin: 30px 0;
+    background-image: linear-gradient(to right, #9f9afa 0%, #6C7AFB 51%, #3f5efb 100%);
+}
+
+
+/* 
+            POPULAR
+            */
+
+.populardiv {
+    background: url(images/wavecocktail.svg) no-repeat;
+    background-size: cover;
+}
+
+.populartext {
+    padding: 100px;
+}
+
+h2 {
+    color: #0C1A6A;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carouselarrow {
+    width: 40px;
+}
+
+.glide {
+    margin: 50px 0;
+}
+
+.glide__arrows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.glide__arrow {
+    position: static;
+    margin-top: 30px;
+    transform: none;
+
+}
+
+
+.glide__arrow--left {
+    opacity: 0;
+}
+
+.glide__arrow--left img {
+    transform: rotate(-180deg);
+}
+
+
+/* 
+        FRIDGE
+*/
+
+.fridgediv {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    padding: 0 50px;
+}
+
+.fridgetext {
+    width: 30%;
+    margin-left: 10%;
+}
+
+.fridgetext p {
+    width: 70%;
+    line-height: 1.5em;
+}
+
+.fridgesvg {
+    width: 40%;
+    margin: 50px;
+}
+
+/*
+            TIPS
+*/
+
+.tipsdiv {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    padding: 0 50px;
+}
+
+.tipstextleft {
+    width: 30%;
+    margin: 0 5%;
+}
+
+.tipstextright {
+    width: 30%;
+    margin-left: 10%;
+}
+
+/*
+            FOOTER
+*/
+
+.footer {
+    background-color: #efeeff;
+    height: 200px;
+}
