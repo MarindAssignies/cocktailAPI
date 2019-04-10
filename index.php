@@ -14,11 +14,13 @@ include 'form_handler.php';
 </head>
 <body>
     <!-- Form -->
+
     <form action="#" method="get">
         <input type="text" name="ingredient" placeholder="Ingredient" value="<?= $ingredient ?>">
-
+        <input type="submit">
+    </form>
+    <form>
         <div class="field">
-            TYPE
             <?php foreach($types as $_type): ?>
                 <br>
                 <label>
@@ -32,17 +34,14 @@ include 'form_handler.php';
                 </label>
             <?php endforeach; ?>
         </div>
-
-    <input type="submit">
+        <input type="submit">
     </form>
-
-    
 
     <!-- Results -->
     <?php foreach($result->drinks as $_drink ): ?>
         <div><?= $_drink->strDrink ?></div>
+        <img src="<?= $_drink->strDrinkThumb ?>" alt="">
     <?php endforeach; ?>
 
-    
 </body>
 </html>
