@@ -412,7 +412,6 @@ article{
     justify-content: space-between;
 }
 
-
 .cards img{
     width: 300px;
 }
@@ -433,4 +432,26 @@ article{
     color: #FC466B;
     text-decoration: none;
     padding: 5% 5%;
+}
+
+
+/*****************************************************************
+
+                    WHAT'S IN MY FRIDGE
+
+*****************************************************************/
+
+
+/***** RECIPE *****/
+
+.fridge_search{
+    
+    width: 30%;
+    background-color: #efeeff;
+    padding: 5% 5%;
+}
+
+.fridge_search h2{
+    font-size: 1.5em;
+    padding: 20px 0;
 }

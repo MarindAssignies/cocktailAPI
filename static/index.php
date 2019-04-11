@@ -15,7 +15,7 @@
         <p>Go to your fridge, select which ingredients and alcohols you have and Sprit will tell you what you can
             create !
         </p>
-        <a class="intro_button" href="#">LET'S SEE</a>
+        <a class="intro_button" href="fridge.php">LET'S SEE</a>
     </div>
     <img class="introsvg" src="images/introillus.svg" alt="imageintro">
 </div>
