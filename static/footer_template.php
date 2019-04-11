@@ -6,7 +6,7 @@
             <a href=""><img src="images/twitter.svg" alt="#"></a>
         </div>
         <div class="footer_line"></div>
-        <a href="index.php"><img class="footer_logo" src="images/spritr_logo.svg" alt="logo" /></a>
+        <a href="index.php"><img class="footer_logo" src="images/footer_logo.svg" alt="logo" /></a>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
