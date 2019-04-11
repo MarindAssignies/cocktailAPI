@@ -47,7 +47,8 @@ $type = empty($_GET['type']) ? '' : $_GET['type'];
 
 // Create API url searching by ingredient
 
-function ingUrl($ingredient){
+function ingUrl($ingredient)
+{
     $url = "http://www.thecocktaildb.com/api/json/v2/8673533/filter.php?";
     $url .= http_build_query([
         'i' => $ingredient
@@ -57,7 +58,8 @@ function ingUrl($ingredient){
 
 // Create API url searching by type
 
-function typeUrl($type){
+function typeUrl($type)
+{
     
     $url = "http://www.thecocktaildb.com/api/json/v2/8673533/filter.php?";
     $url .= http_build_query([
@@ -103,4 +105,5 @@ function initSearch($ingredient, $type)
 
 }
 $result = initSearch($ingredient, $type);
+
 ?>
