@@ -119,6 +119,39 @@ select(document.getElementById("selectName"), names)
  * Input values for multiple ingredients
  */
 
-var selectIng = document.getElementById("selectIng").value
-var multIng = document.getElementById("multIng").value
+var selectIng = document.getElementById("selectIng")
+var multIng = document.getElementById("multIng")
+
+function addTag(e, selectIng, multIng)
+{
+  if(multIng.value == ''){
+    multIng.value = `${selectIng.value}`
+  }
+  else if(selectIng.value == ''){
+    e.preventDefault()
+  }
+  else{
+    multIng.value = `${multIng.value},${selectIng.value}`
+  }
+}
+
+function createTag(){
+  var tag = document.createElement("span")
+  tag.innerHTML = selectIng.value
+  tag.classList.add("span")
+  document.body.appendChild(tag)
+  console.log(tag)
+}
+
+selectIng.addEventListener('keypress', (e) =>
+{
+  if(e.keyCode == 13 || e.keyCode == 32)
+  {
+    e.preventDefault();
+    addTag(e, selectIng, multIng)
+    createTag()
+    selectIng.value = ""
+  }
+})
+
 

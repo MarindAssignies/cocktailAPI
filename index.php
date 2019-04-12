@@ -21,10 +21,10 @@ include 'form_handler.php';
     </form>
 
     <form action="#" autocomplete="off" method="get">
-        <div class="selection">
-            <input id="selectIng" type="text" name="ingredient" placeholder="Ingredient" value="<?= $ingredient ?>">
-        </div>
-        <input id="multIng" class="inputHidden" type="text" name="ingredients" value="">
+    <div class="selection">
+        <input id="selectIng" type="text" name="ingredient" placeholder="Ingredient" value="<?= $ingredient ?>">
+    </div>
+        <input id="multIng" type="text" name="ingredients" value="">
         <input type="submit">
     </form>
 
@@ -56,6 +56,7 @@ include 'form_handler.php';
         <div><?= $_drink->strDrink ?></div>
         <img src="<?= $_drink->strDrinkThumb ?>" alt="">
     <?php endforeach; ?>
+
 
     <script src="script.js"></script>
 

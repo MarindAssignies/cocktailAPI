@@ -40,7 +40,7 @@ function curl($url){
 $name = empty($_GET['name']) ? '' : $_GET['name'];
 
 // Define ingredient
-$ingredient = empty($_GET['ingredient']) ? '' : $_GET['ingredient'];
+$ingredient = empty($_GET['ingredients']) ? '' : $_GET['ingredients'];
 
 $type = empty($_GET['type']) ? '' : $_GET['type'];
 
@@ -90,7 +90,7 @@ function randomUrl()
 
 function initSearch($ingredient, $type)
 {
-    if(!empty($_GET['ingredient'])) 
+    if(!empty($_GET['ingredients'])) 
     {
         return ingUrl($ingredient);
     }

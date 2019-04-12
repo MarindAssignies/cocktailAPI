@@ -3,7 +3,6 @@
 $types = [
     "Alcoholic",
     "Non alcoholic",
-    "Optional alcohol",
     ];
 
 //Default type 
