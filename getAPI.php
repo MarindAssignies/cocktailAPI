@@ -47,10 +47,6 @@ $type = empty($_GET['type']) ? '' : $_GET['type'];
 // Search by id 
 $cocktailId = empty($_GET['cocktailId']) ? '11007'  :$_GET['cocktailId'];
 
-// Search similair recipe
-foreach ($rand->drinks as $_ingredient){
-    $similar = $_ingredient->strIngredient1;
-};
 
 // Create API url searching by ingredient
 
