@@ -7,6 +7,7 @@ $types = [
     ];
 
 //choice for form_handle
+
 $cocktails = [
     'alcohol',
     'without alcohol',
