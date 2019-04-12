@@ -2,6 +2,7 @@
 
 include 'getAPI.php';
 include 'form_handler.php';
+include 'form_cocktail.php';
 
 ?>
 <!DOCTYPE html>
