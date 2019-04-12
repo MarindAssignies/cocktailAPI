@@ -1,6 +1,5 @@
 <?php
 include 'form_handler.php';
-include 'getAPI.php'
 ?>
 
 <!DOCTYPE html>
@@ -25,15 +24,15 @@ include 'getAPI.php'
                     <label>
                         <input
                             type="radio"
-                            name="type"
+                            name="cocktails"
                             value="<?= $_cocktail ?>"
                             <?= $_POST['cocktails'] === $_cocktail ? 'checked' : '' ?>
                         >
-                        <?= ucfirst($_type) ?>
+                        <?= ucfirst($_cocktail) ?>
                     </label>
                 <?php endforeach; ?>
                 <div class="form-button">
-                    <button type="submit" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                    <button type="submit" id="nextBtn" >Next</button>
                 </div>
             </div>
 
@@ -56,13 +55,16 @@ include 'getAPI.php'
                     </label>
                 <?php endforeach; ?>
                 <div class="form-button">
-                    <button type="submit" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                    <button type="submit" id="nextBtn" >Next</button>
                 </div>
             </div>
         
             <?php   
-
-                $data_alcohol=file_get_contents($type);
+                $url_type='https://www.thecocktaildb.com/api/json/v2/8673533/search.php?';
+                $url_type .= http_build_query([
+                    "s" => $_POST['alcohol']
+                ]);
+                $data_alcohol=file_get_contents($url_type);
                 $result_alcohol = json_decode($data_alcohol);
             ?>
 
@@ -89,9 +91,6 @@ include 'getAPI.php'
                         <?= ucfirst($_ingredient_alcohol) ?>
                     </label>
                 <?php endforeach; ?>
-                <div class="form-button">
-                    <button type="submit" id="nextBtn" onclick="nextPrev(1)">Submit</button>
-                </div>        
             </div>
            
 
@@ -106,11 +105,11 @@ include 'getAPI.php'
             <?php 
             $url_type='https://www.thecocktaildb.com/api/json/v2/8673533/search.php?';
             $url_type .= http_build_query([
-                "s" => $_POST['type']
+                "s" => $_POST['non_alcohol']
             ]);
             $data_non_alcohol=file_get_contents($url_type);
             $result_non_alcohol = json_decode($data_non_alcohol);
-    
+
 
             foreach($result_non_alcohol->drinks as $key => $_ingredient):
                 if($key < 3 && $_ingredient->strAlcoholic === 'Non alcoholic'):
@@ -134,7 +133,7 @@ include 'getAPI.php'
                 </label>
             <?php endforeach; ?>
             <div class="form-button">
-                <button type="submit" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                <button type="submit" id="nextBtn">Next</button>
             </div>
         </div>
   
@@ -153,9 +152,6 @@ include 'getAPI.php'
                     <?= ucfirst($_ingredient_non_alcohol) ?>
                 </label>
             <?php endforeach; ?>
-            <div class="form-button">
-                <button type="submit" id="nextBtn" onclick="nextPrev(1)">Submit</button>
-            </div>
         </div>
 
 
