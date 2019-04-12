@@ -16,7 +16,8 @@ You will find cocktails to create with your ingredients, no need to buy a lot, j
 
 - Search bar
 - Random cocktail
-- blablabla
+- Ingredients choice
+- Popular cocktails
 
 
 ## Authors :

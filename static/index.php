@@ -26,10 +26,17 @@
         <div class="glide">
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
-                    <?php foreach ($result_popular->drinks as $_drink ): ?>
+                    <?php foreach ($result_popular->drinks as $_drink ): 
+                    $drinkId = $_drink->idDrink ?>
                     <li class="glide__slide">
-                        <p><?= $_drink->strDrink ?></p><img src="<?= $result_thumb = $_drink->strDrinkThumb ?>"
-                            alt="<?=$_drink->strDrink ?> ">
+                        <form action="http://localhost/cocktailAPI/static/recipe.php?cocktailId=<?php echo $drinkId?>"
+                            method="get">
+                            <label for="<?= $_drink->idDrink ?>"><img
+                                    src="<?= $result_thumb = $_drink->strDrinkThumb ?>"
+                                    alt="<?=$_drink->strDrink ?> "></label>
+                            <input id="<?= $_drink->idDrink ?>" type="submit" name="cocktailId"
+                                value=<?php echo $_drink->idDrink?>>
+                        </form>
                     </li>
                     <?php endforeach; ?>
                 </ul>
@@ -53,16 +60,6 @@
         <a class="intro_button" href="random.php">LET'S GO</a>
     </div>
 </div>
-<div class="tipsdiv">
-    <div class="tipstextleft">
-        <h4>DAILY KNOWLEDGE</h4>
-        <h1>TIPS OF THE DAY</h1>
-    </div>
-    <div class="tipstextright">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, cupiditate, ea enim delectus quo qui
-            aliquid nobis incidunt optio dolore minus, quis quos explicabo error ut tempore adipisci neque minima?
-        </p>
-    </div>
-</div>
+
 
 <?php include('footer_template.php') ?>

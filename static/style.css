@@ -158,7 +158,7 @@ footer a {
 
 .introtext {
     width: 30%;
-    margin-left:5%;
+    margin-left: 5%;
 }
 
 .introtext p {
@@ -201,19 +201,16 @@ footer a {
 }
 
 
-.glide__track ul li p {
-    position: absolute;
-    opacity: 0;
-    align-items: center;
+.glide__track ul li form {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
+    padding: 10px 0;
 }
 
-.glide__track ul li:hover p {
-    opacity: 1;
-    background-color: #0C1A6A;
-    color: #f8f8f8;
+
+.glide__track ul li form input {
+    display: none;
 }
+
 
 .glide__arrows {
     display: flex;
@@ -226,9 +223,10 @@ footer a {
     transform: none;
 }
 
-.glide__arrow--left{
+.glide__arrow--left {
     opacity: 0;
 }
+
 .glide__arrow--left img {
     transform: rotate(-180deg);
 }
@@ -236,6 +234,7 @@ footer a {
 .glide__slides img {
     width: 300px;
     height: 300px;
+    object-fit: cover;
 }
 
 /***** RANDOM *****/
@@ -259,27 +258,8 @@ footer a {
 
 .randomsvg {
     width: 40%;
-    margin:0 5%;
-}
-
-/***** TIPS *****/
-
-.tipsdiv {
-    display: flex;
-    align-items: center;
-    margin: 5% 5%;
-}
-
-.tipstextleft {
-    width: 30%;
     margin: 0 5%;
 }
-
-.tipstextright {
-    width: 30%;
-    margin-left: 10%;
-}
-
 
 
 /*****************************************************************
@@ -291,7 +271,7 @@ footer a {
 
 /***** INTRO *****/
 
-.main{
+.main {
     background-color: #efeeff;
     padding: 5% 0;
 }
@@ -351,7 +331,7 @@ textarea {
     background-image: linear-gradient(to right, #9f9afa, #6c7afb 51%, #3f5efb 100%);
 }
 
-.information{
+.information {
     margin: 5% 5%;
 }
 
@@ -364,18 +344,18 @@ textarea {
 
 /***** RECIPE *****/
 
-article{
+article {
     padding: 5% 0;
 }
 
-.drink-info{
+.drink-info {
     display: flex;
     width: 80%;
-    margin:0 10%;
+    margin: 0 10%;
 }
 
 
-.drink-info img{
+.drink-info img {
     width: 550px;
     height: 500px;
     object-fit: cover;
@@ -383,55 +363,65 @@ article{
 
 .drink-text {
     width: 60%;
-    margin-left: 5%; 
+    margin-left: 5%;
 }
 
-.drink-text h1{
+.drink-text h1 {
     width: 90%;
 }
-.drink-text p{
+
+.drink-text p {
     line-height: 1.5em;
     width: 70%;
 }
-.drink-text h2{
+
+.drink-text h2 {
     padding: 10px 0;
 }
 
 /***** SIMILAR *****/
 
 
-.related-content{
-    margin : 5% 10%;
+.related-content {
+    margin: 5% 10%;
 }
 
-.related-content h2{
+.related-content h2 {
     padding-bottom: 5%;
 }
-.cards{
+
+.cards {
     display: flex;
     justify-content: space-between;
 }
 
-.cards img{
+.cards img {
     width: 300px;
 }
 
-.card h2{
+.card h2 {
     font-size: 1.5em;
     padding: 5% 5%;
 }
 
-.card{
+.card {
     width: 300px;
     box-shadow: 0px 5px 14px -4px rgba(145, 145, 145, 0.75);
-    height: 450px;
+    height: auto;
     display: inline-block;
 }
 
-.card a{
+.card form {
+    text-align: center;
+}
+
+.card label {
     color: #FC466B;
-    text-decoration: none;
-    padding: 5% 5%;
+    font-size: 1.3em;
+}
+
+.card input {
+    display: none;
 }
 
 
@@ -443,15 +433,109 @@ article{
 
 
 /***** RECIPE *****/
+.whatsinmyfridge {
+    display: flex;
+}
 
-.fridge_search{
-    
-    width: 30%;
+.fridge_search {
+    width: 20%;
+    height: 100%;
     background-color: #efeeff;
+    padding: 20px 20px;
+}
+
+.fridge_search h2 {
+    font-size: 1.5em;
+    padding: 20px 0;
+}
+
+.selection {
+    position: relative;
+    display:inline-block;
+}
+
+.selection input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+.selection input[type=submit] {
+    background-color: #ffffff;
+    color: rgb(192, 25, 25);
+}
+
+input[type=radio] {
+    width: 50%;
+}
+
+.select_label {
+    margin-left: -40px;
+}
+
+.selection-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.selection-items div {
+    background-color: #fff;
+}
+
+.selection-items div:hover {
+    color: #9f9afa;
+}
+
+.selection-active {
+    color: #9f9afa;
+}
+
+.span {
+    color: #9f9afa;
+}
+
+
+.result{
+    width: 70%;
+    height: 100%;
+}
+
+.result img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.result_element{
+    width: 250px;
+    display: inline-block;
+    padding: 20px 5%;
+}
+
+.result_element a{
+    text-decoration: none;
+    display: flex;
+    padding: 2% 5%;
+}
+.errorpage {
+    width: 60%;
     padding: 5% 5%;
 }
 
-.fridge_search h2{
-    font-size: 1.5em;
-    padding: 20px 0;
+.errorpage img {
+    width: 80%;
+    height: 50%;
+}
+
+.errorpage p {
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.errorpage a {
+    display: block;
+    margin: 20px auto;
 }

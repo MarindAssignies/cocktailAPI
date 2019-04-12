@@ -93,15 +93,15 @@ foreach ($activeCocktailInfo->drinks as $_drink) {
                 if($key < 3){
                 $related_image = "<img src='".$_related->strDrinkThumb."' alt=''>";
                 $related_name = "<span class='cards-name'>".$_related->strDrink."</span>";
-                $related_id = $_related->idDrink;
+                $related_id = $_related->strDrink;
             ?>
             <div class="card">
                 <div><?php echo $related_image;?></div>
                 <h2><?php echo $related_name;?></h2>
-                <form action="recipe.php?cocktailId=<?php echo $related_id?>" method="get">
-                    <label for="<?= $_related->idDrink ?>">See recipe</label>
-                    <input id="<?= $_related->idDrink ?>" type="submit" name="cocktailId"
-                        value=<?php echo $_related->idDrink?>>
+                <form action="recipe.php?name=<?php echo $related_id?>" method="get">
+                    <label for="<?= $_related->strDrink ?>">See recipe</label>
+                    <input id="<?= $_related->strDrink ?>" type="submit" name="name"
+                        value=<?php echo $_related->strDrink?>>
                 </form>
             </div>
             <?php
@@ -113,3 +113,4 @@ foreach ($activeCocktailInfo->drinks as $_drink) {
 </main>
 
 <?php include 'footer_template.php'; ?>
+<a href="cocktail.php?name=<?= $_drink->strDrink ?>"><?= $_drink->strDrink ?></a>

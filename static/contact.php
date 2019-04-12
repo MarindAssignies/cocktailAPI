@@ -20,12 +20,12 @@
                 <div class="form_container_row">
                     <label for="email">Email adress</label>
                     <input class="email" type="email" name="email" id="email" placeholder="toto@gmail.com"
-                        legend="Email Address" value="">
+                        legend="Email Address" value="<?= $_POST['email'] ?>">
                 </div>
                 <div class="form_container_row">
                     <label for="request">Your request</label>
                     <textarea class="request" type="text" name="request" id="res" placeholder="Tell us what's wrong"
-                        legend="Your Request" value=""></textarea>
+                        legend="Your Request" value="<? = $_POST['request'] ?>"></textarea>
                 </div>
                 <input class="button_form" type="submit" value="SEND">
             </form>

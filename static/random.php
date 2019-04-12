@@ -9,7 +9,8 @@
             $data_rand = file_get_contents($url_rand);
             $rand = json_decode($data_rand);
 
-            foreach ($rand->drinks as $rand_drink){?>
+            foreach ($rand->drinks as $key =>  $rand_drink){
+                if($key < 1){?>
         <div class='drink-info'>
             <img src='<?php echo $rand_drink->strDrinkThumb ?>' alt='imgdrink'>
             <div class="drink-text">
@@ -68,6 +69,7 @@
             </div>
         </div>
         <?php
+                }
             }
             ?>
     </article>
@@ -90,14 +92,20 @@
                 if($key < 3){
                 $related_image = "<img src='".$_related->strDrinkThumb."' alt=''>";
                 $related_name = "<span class='cards-name'>".$_related->strDrink."</span>";
+                $related_id = $_related->idDrink;
+                
             ?>
             <div class="card">
                 <div><?php echo $related_image;?></div>
                 <h2><?php echo $related_name;?></h2>
-                <a
-                    href="https://www.thecocktaildb.com/api/json/v2/8673533/search.php?s=<?php echo $_related->strDrink?>">See
-                    the recipe</a>
-            </div>
+                
+                <form action="http://localhost/cocktailAPI/static/recipe.php?cocktailId=<?php echo $related_id?>"
+                    method="get">
+                    <label for="<?= $_related->idDrink ?>">See recipe</label>
+                    <input id="<?= $_related->idDrink ?>" type="submit" name="cocktailId"
+                        value=<?php echo $_related->idDrink?>>
+                </form>
+                </div>
             <?php
                 }
             };

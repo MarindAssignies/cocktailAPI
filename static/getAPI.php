@@ -1,10 +1,10 @@
 <?php
-include 'form_handler.php';
+include '../form_handler.php';
 
 function curl($url){
     // Create cache info
     $cacheKey = md5($url);
-    $cachePath = './cache/'.$cacheKey;
+    $cachePath = '../cache/'.$cacheKey;
     $cacheUsed = false;
 
     // Cache available
