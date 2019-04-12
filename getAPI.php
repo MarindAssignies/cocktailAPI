@@ -44,6 +44,13 @@ $ingredient = empty($_GET['ingredients']) ? '' : $_GET['ingredients'];
 
 $type = empty($_GET['type']) ? '' : $_GET['type'];
 
+// Search by id 
+$cocktailId = empty($_GET['cocktailId']) ? '11007'  :$_GET['cocktailId'];
+
+// Search similair recipe
+foreach ($rand->drinks as $_ingredient){
+    $similar = $_ingredient->strIngredient1;
+};
 
 // Create API url searching by ingredient
 
@@ -80,14 +87,25 @@ function nameUrl($name)
     return curl($url);
 }
 
-// Random 
-
-function randomUrl()
+// Create API url searching by id
+function idUrl($cocktailId)
 {
-    $url = "https://www.thecocktaildb.com/api/json/v2/8673533/random.php";
-    return curl($url);
+    $url = "https://www.thecocktaildb.com/api/json/v2/8673533/lookup.php?";
+    $url .= http_build_query([
+        'i' => $cocktailId
+    ]);
 }
 
+// Create API url for similar recipe
+function similar($similar)
+{
+    $url = "https://www.thecocktaildb.com/api/json/v2/8673533/filter.php?";
+    $url .= http_build_query([
+    'i' => $similar
+    ]);
+}
+
+// Call the functions
 function initSearch($ingredient, $type)
 {
     if(!empty($_GET['ingredients'])) 
@@ -98,11 +116,6 @@ function initSearch($ingredient, $type)
     {
         return typeUrl($type);
     }
-    else 
-    {
-        return randomUrl();
-    }
-
 }
 $result = initSearch($ingredient, $type);
 

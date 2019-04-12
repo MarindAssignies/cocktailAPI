@@ -15,11 +15,6 @@ include 'form_handler.php';
 </head>
 <body>
     <!-- Form -->
-    <form action="./random.php" method='get'>
-        <input style="display: none;" type="text" name="random" value="true">
-        <input type="submit" value="Random">
-    </form>
-
     <form action="#" autocomplete="off" method="get">
     <div class="selection">
         <input id="selectIng" type="text" name="ingredient" placeholder="Ingredient" value="<?= $ingredient ?>">
@@ -28,7 +23,7 @@ include 'form_handler.php';
         <input type="submit">
     </form>
 
-    <form action="cocktail.php?name<?= $_drink->strDrink ?>" autocomplete="off" method="get">
+    <form action="recipe.php?name<?= $_drink->strDrink ?>" autocomplete="off" method="get">
         <div class="selection">
             <input id="selectName" type="text" name="name" placeholder="Name" value="<?= $name ?>">
         </div>
