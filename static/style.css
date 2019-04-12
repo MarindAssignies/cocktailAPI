@@ -35,6 +35,7 @@ h2 {
 
 h4 {
     color: #FC466B;
+    text-transform: uppercase;
 }
 
 
@@ -55,7 +56,6 @@ header {
 header img {
     width: 150px;
     height: 50px;
-    padding-left: 5%;
 }
 
 /***** LOADER *****/
@@ -133,6 +133,11 @@ footer a {
     margin: 20px;
 }
 
+.footer_logo {
+    width: 150px;
+    height: auto;
+}
+
 
 
 /*****************************************************************
@@ -148,13 +153,12 @@ footer a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px 0;
-    padding: 0 50px;
+    margin: 5% 5%;
 }
 
 .introtext {
     width: 30%;
-    margin: 0 5%;
+    margin-left:5%;
 }
 
 .introtext p {
@@ -185,19 +189,17 @@ footer a {
 .populardiv {
     background: url(images/wavecocktail.svg) no-repeat;
     background-size: cover;
+    padding: 0 5%;
 }
 
 .populartext {
-    padding: 100px;
+    padding: 10% 5%;
 }
 
 .carouselarrow {
     width: 40px;
 }
 
-.glide {
-    margin: 50px 0;
-}
 
 .glide__track ul li p {
     position: absolute;
@@ -224,6 +226,9 @@ footer a {
     transform: none;
 }
 
+.glide__arrow--left{
+    opacity: 0;
+}
 .glide__arrow--left img {
     transform: rotate(-180deg);
 }
@@ -238,8 +243,8 @@ footer a {
 .randomdiv {
     display: flex;
     align-items: center;
-    margin: 50px 0;
-    padding: 0 50px;
+    margin: 5% 0;
+    padding: 0 5%;
 }
 
 .randomtext {
@@ -254,7 +259,7 @@ footer a {
 
 .randomsvg {
     width: 40%;
-    margin: 50px;
+    margin:0 5%;
 }
 
 /***** TIPS *****/
@@ -262,8 +267,7 @@ footer a {
 .tipsdiv {
     display: flex;
     align-items: center;
-    margin: 50px 0;
-    padding: 0 50px;
+    margin: 5% 5%;
 }
 
 .tipstextleft {
@@ -349,4 +353,105 @@ textarea {
 
 .information{
     margin: 5% 5%;
+}
+
+/*****************************************************************
+
+                    RANDOM RECIPES
+
+*****************************************************************/
+
+
+/***** RECIPE *****/
+
+article{
+    padding: 5% 0;
+}
+
+.drink-info{
+    display: flex;
+    width: 80%;
+    margin:0 10%;
+}
+
+
+.drink-info img{
+    width: 550px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.drink-text {
+    width: 60%;
+    margin-left: 5%; 
+}
+
+.drink-text h1{
+    width: 90%;
+}
+.drink-text p{
+    line-height: 1.5em;
+    width: 70%;
+}
+.drink-text h2{
+    padding: 10px 0;
+}
+
+/***** SIMILAR *****/
+
+
+.related-content{
+    margin : 5% 10%;
+}
+
+.related-content h2{
+    padding-bottom: 5%;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards img{
+    width: 300px;
+}
+
+.card h2{
+    font-size: 1.5em;
+    padding: 5% 5%;
+}
+
+.card{
+    width: 300px;
+    box-shadow: 0px 5px 14px -4px rgba(145, 145, 145, 0.75);
+    height: 450px;
+    display: inline-block;
+}
+
+.card a{
+    color: #FC466B;
+    text-decoration: none;
+    padding: 5% 5%;
+}
+
+
+/*****************************************************************
+
+                    WHAT'S IN MY FRIDGE
+
+*****************************************************************/
+
+
+/***** RECIPE *****/
+
+.fridge_search{
+    
+    width: 30%;
+    background-color: #efeeff;
+    padding: 5% 5%;
+}
+
+.fridge_search h2{
+    font-size: 1.5em;
+    padding: 20px 0;
 }

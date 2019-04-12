@@ -19,10 +19,10 @@
         <img src="images/loading.gif" alt="Loading...">
     </div>
     <header>
-        <a href="index.php"> <img src="images/logo.svg" alt="logo"></a>
+        <a href="index.php"><img src="images/logo.svg" alt="logo"></a>
         <nav class="menu">
             <ul id="navigation">
-                <li><a href="#" title="my fridge">What's in my fridge ?</a></li>
+                <li><a href="fridge.php" title="my fridge">What's in my fridge ?</a></li>
                 <li><a href="random.php" title="random mix">Random mix</a></li>
                 <li><a href="contact.php" title="contact">Contact us</a></li>
             </ul>
